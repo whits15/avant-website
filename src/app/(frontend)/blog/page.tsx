@@ -68,7 +68,7 @@ export default async function BlogPage() {
                                         author: post.author || null,
                                         publishedAt: post.publishedAt || null,
                                         coverImage: post.coverImage || null,
-                                        tags: post.tags || [],
+                                        tags: [...(post.tags || [])],
                                     }}
                                 />
                             ))}
