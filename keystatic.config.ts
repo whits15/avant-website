@@ -5,7 +5,7 @@ export default config({
         kind: "cloud",
     },
     cloud: {
-        project: "landship/avant-website",
+        project: "landship/landship",
     },
     collections: {
         posts: collection({
