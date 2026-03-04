@@ -6,8 +6,8 @@ export default function Footer() {
         <footer className={styles.footer}>
             <div className={`container ${styles.inner}`}>
                 <div className={styles.brand}>
-                    <span className={styles.logo}>LANDSHIP</span>
-                    <p className={styles.tagline}>Built for the terrain ahead.</p>
+                    <span className={styles.logo}>AVANT</span>
+                    <p className={styles.tagline}>Go Forward.</p>
                 </div>
 
                 <div className={styles.links}>
@@ -20,7 +20,7 @@ export default function Footer() {
 
                 <div className={styles.bottom}>
                     <p className={styles.copy}>
-                        © {new Date().getFullYear()} Landship. All rights reserved.
+                        © {new Date().getFullYear()} Avant. All rights reserved.
                     </p>
                     <p className={styles.location}>Ontario, Canada</p>
                 </div>

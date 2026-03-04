@@ -79,7 +79,7 @@ export default function Contact() {
                         <div className={styles.details}>
                             <div className={styles.detail}>
                                 <span className={styles.detailIcon}>@</span>
-                                <span>hello@landship.ca</span>
+                                <span>hello@avant.ca</span>
                             </div>
                             <div className={styles.detail}>
                                 <span className={styles.detailIcon}>•</span>

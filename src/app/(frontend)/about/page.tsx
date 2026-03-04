@@ -7,7 +7,7 @@ import FAQ from "@/components/FAQ";
 export const metadata: Metadata = {
     title: "About",
     description:
-        "Why Ontario businesses choose Landship for AI implementation. Our approach, process, and what makes us different from big consulting firms.",
+        "Why Ontario businesses choose Avant for AI implementation. Our approach, process, and what makes us different from big consulting firms.",
 };
 
 export default function AboutPage() {

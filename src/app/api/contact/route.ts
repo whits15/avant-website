@@ -41,7 +41,7 @@ export async function POST(req: NextRequest) {
         //   .insert({ name, email, phone, company, employee_count: employees, message });
 
         // TODO: Send email notification
-        // await sendEmail({ to: "hello@landship.ca", subject: `New lead: ${company}`, ... });
+        // await sendEmail({ to: "hello@avant.ca", subject: `New lead: ${company}`, ... });
 
         return NextResponse.json(
             { success: true, message: "Thank you! We'll be in touch within 24 hours." },

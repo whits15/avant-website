@@ -27,7 +27,7 @@ export default function Navbar() {
         <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ""}`}>
             <div className={`container ${styles.inner}`}>
                 <Link href="/" className={styles.logo}>
-                    LANDSHIP
+                    AVANT
                 </Link>
 
                 {/* Desktop links */}

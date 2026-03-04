@@ -18,12 +18,12 @@ export default function Differentiators() {
     return (
         <section className={`section ${styles.section}`}>
             <div className={`container reveal ${revealed ? "revealed" : ""}`} ref={ref}>
-                <p className="section-label">Why Landship</p>
+                <p className="section-label">Why Avant</p>
                 <h2 className="section-title">
                     Built for businesses that build Ontario.
                 </h2>
                 <p className="section-subtitle">
-                    Landship — a vessel built for the terrain ahead. We don&apos;t
+                    Avant — Go Forward. We don&apos;t
                     theorize from the sidelines; we build the craft and steer it
                     with you.
                 </p>
@@ -31,7 +31,7 @@ export default function Differentiators() {
                 <div className={styles.table}>
                     <div className={styles.tableHeader}>
                         <span />
-                        <span className={styles.headerUs}>Landship</span>
+                        <span className={styles.headerUs}>Avant</span>
                         <span className={styles.headerThem}>Big Firms</span>
                     </div>
                     {ATTRIBUTES.map((attr) => (

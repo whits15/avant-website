@@ -4,11 +4,11 @@ import "./globals.css";
 export const metadata: Metadata = {
     title: {
         default:
-            "Landship | AI Workshops & Implementation for Ontario Businesses",
-        template: "%s | Landship",
+            "Avant | AI Workshops & Implementation for Ontario Businesses",
+        template: "%s | Avant",
     },
     description:
-        "Landship helps Ontario small and medium businesses move from AI curiosity to measurable operational results.",
+        "Avant helps Ontario small and medium businesses move from AI curiosity to measurable operational results.",
     robots: { index: true, follow: true },
 };
 

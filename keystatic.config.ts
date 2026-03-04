@@ -5,7 +5,7 @@ export default config({
         kind: "cloud",
     },
     cloud: {
-        project: "landship/landship",
+        project: "avant/avant",
     },
     collections: {
         posts: collection({
@@ -42,7 +42,7 @@ export default config({
                 }),
                 author: fields.text({
                     label: "Author",
-                    defaultValue: "Landship Team",
+                    defaultValue: "Avant Team",
                 }),
                 tags: fields.array(fields.text({ label: "Tag" }), {
                     label: "Tags",

@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         title: post.title,
         description:
             post.excerpt ||
-            `${typeof post.title === "string" ? post.title : slug} — Landship Blog`,
+            `${typeof post.title === "string" ? post.title : slug} — Avant Blog`,
     };
 }
 
@@ -118,12 +118,12 @@ export default async function BlogPostPage({ params }: Props) {
                         description: post.excerpt || "",
                         author: {
                             "@type": "Person",
-                            name: post.author || "Landship Team",
+                            name: post.author || "Avant Team",
                         },
                         datePublished: post.publishedAt,
                         publisher: {
                             "@type": "Organization",
-                            name: "Landship",
+                            name: "Avant",
                         },
                     }),
                 }}
