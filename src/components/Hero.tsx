@@ -1,13 +1,20 @@
+"use client";
+
 import React from 'react';
 import Link from 'next/link';
+import dynamic from 'next/dynamic';
 import styles from './Hero.module.css';
+
+const GlobeBackground = dynamic(() => import('./GlobeBackground'), {
+  ssr: false,
+  loading: () => <div className={styles.heroGlow} />,
+});
 
 export default function Hero() {
   return (
     <section className={styles.heroWrapper} aria-label="Introduction">
-      <div className={styles.heroGlow}></div>
+      <GlobeBackground />
       <div className={styles.heroContent}>
-        <div className={styles.label}>AI Strategy & Execution</div>
         <h1 className={styles.headline}>
           Go Forward.
         </h1>
