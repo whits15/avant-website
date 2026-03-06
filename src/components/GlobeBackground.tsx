@@ -48,8 +48,9 @@ export default function GlobeBackground() {
     useEffect(() => {
         const container = containerRef.current;
         if (!container) return;
-        if (window.innerWidth < 768) return;
-        if (navigator.hardwareConcurrency != null && navigator.hardwareConcurrency < 4) return;
+
+        // Allow rendering on mobile, but gracefully degrade on extremely low-end devices
+        if (navigator.hardwareConcurrency != null && navigator.hardwareConcurrency < 2) return;
 
         const width = container.clientWidth;
         const height = container.clientHeight;
@@ -61,7 +62,10 @@ export default function GlobeBackground() {
 
         const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
         renderer.setSize(width, height);
-        renderer.setPixelRatio(window.devicePixelRatio);
+
+        // Cap pixel ratio on mobile to maintain performance
+        const isMobile = window.innerWidth < 768;
+        renderer.setPixelRatio(isMobile ? Math.min(window.devicePixelRatio, 1.5) : window.devicePixelRatio);
         renderer.setClearColor(0x000000, 0);
         container.appendChild(renderer.domElement);
 
@@ -151,9 +155,19 @@ export default function GlobeBackground() {
         /* ── Mouse tracking ── */
         const onMouseMove = (e: MouseEvent) => {
             const rect = container.getBoundingClientRect();
-            mouseRef.current.tx = ((e.clientX - rect.left) / rect.width) * 2 - 1;
-            mouseRef.current.ty = -((e.clientY - rect.top) / rect.height) * 2 + 1;
-            mouseRef.current.active = true;
+            // Only track when cursor is inside the hero section
+            if (
+                e.clientX >= rect.left &&
+                e.clientX <= rect.right &&
+                e.clientY >= rect.top &&
+                e.clientY <= rect.bottom
+            ) {
+                mouseRef.current.tx = ((e.clientX - rect.left) / rect.width) * 2 - 1;
+                mouseRef.current.ty = -((e.clientY - rect.top) / rect.height) * 2 + 1;
+                mouseRef.current.active = true;
+            } else {
+                mouseRef.current.active = false;
+            }
         };
         window.addEventListener("mousemove", onMouseMove);
 
@@ -232,11 +246,21 @@ export default function GlobeBackground() {
                     layer.positions[ix] += layer.velocities[ix];
                     layer.positions[ix + 1] += layer.velocities[ix + 1];
 
-                    // Boundary wrapping
-                    if (layer.positions[ix] > SPREAD) layer.positions[ix] = -SPREAD;
-                    if (layer.positions[ix] < -SPREAD) layer.positions[ix] = SPREAD;
-                    if (layer.positions[ix + 1] > SPREAD * 0.6) layer.positions[ix + 1] = -SPREAD * 0.6;
-                    if (layer.positions[ix + 1] < -SPREAD * 0.6) layer.positions[ix + 1] = SPREAD * 0.6;
+                    // Soft boundary — push particles back toward center when near edges
+                    const edgeX = SPREAD * 0.85;
+                    const edgeY = SPREAD * 0.5;
+                    const pushStrength = 0.002;
+
+                    if (layer.positions[ix] > edgeX) {
+                        layer.velocities[ix] -= (layer.positions[ix] - edgeX) * pushStrength;
+                    } else if (layer.positions[ix] < -edgeX) {
+                        layer.velocities[ix] -= (layer.positions[ix] + edgeX) * pushStrength;
+                    }
+                    if (layer.positions[ix + 1] > edgeY) {
+                        layer.velocities[ix + 1] -= (layer.positions[ix + 1] - edgeY) * pushStrength;
+                    } else if (layer.positions[ix + 1] < -edgeY) {
+                        layer.velocities[ix + 1] -= (layer.positions[ix + 1] + edgeY) * pushStrength;
+                    }
 
                     // Update mesh
                     const p = layer.particles[i];

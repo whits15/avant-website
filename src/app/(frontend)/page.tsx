@@ -1,5 +1,6 @@
 import Hero from "@/components/Hero";
 import ScrollReveal from "@/components/ScrollReveal";
+import ServiceTimeline from "@/components/ServiceTimeline";
 import StatCard from "@/components/StatCard";
 import TiltCard from "@/components/TiltCard";
 import styles from "./home.module.css";
@@ -81,11 +82,7 @@ export default function Home() {
                             sprints — choose the right starting point for your team.
                         </p>
                     </ScrollReveal>
-                    <ScrollReveal delay={200}>
-                        <a href="/services" className="btn btn--primary" style={{ marginTop: "var(--space-lg)" }}>
-                            Explore Services →
-                        </a>
-                    </ScrollReveal>
+                    <ServiceTimeline />
                 </div>
             </section>
 

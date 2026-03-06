@@ -57,7 +57,7 @@ export default function Industries() {
 
                 <div className={styles.grid}>
                     {INDUSTRIES.map((ind) => (
-                        <div key={ind.name} className={`card ${styles.card}`}>
+                        <div key={ind.name} className={styles.card}>
                             <span className={styles.icon}>{ind.icon}</span>
                             <h3 className={styles.name}>{ind.name}</h3>
                             <p className={styles.desc}>{ind.desc}</p>
