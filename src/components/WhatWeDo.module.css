@@ -68,9 +68,9 @@
 .step {
     display: flex;
     flex-direction: column;
-    background: rgba(26, 26, 31, 0.65);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    background: rgba(26, 26, 31, 0.015);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
     border: 1px solid var(--glass-border);
     border-radius: var(--border-radius);
     padding: var(--space-lg);
