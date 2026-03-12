@@ -1,0 +1,106 @@
+/* ── About Hero ── */
+.hero {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: calc(var(--nav-height) + var(--space-2xl)) 0 var(--space-2xl);
+    position: relative;
+    overflow: hidden;
+}
+
+/* 3D OrbitalNetwork background */
+.orbital {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+/* Fallback glow while Three.js loads */
+.orbitalFallback {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        ellipse at 55% 45%,
+        rgba(74, 144, 217, 0.05) 0%,
+        transparent 65%
+    );
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.label {
+    font-family: var(--font-display);
+    font-size: var(--fs-xs);
+    font-weight: var(--fw-bold);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ls-accent);
+    margin-bottom: var(--space-lg);
+    background: rgba(74, 144, 217, 0.05);
+    padding: 0.5rem 1rem;
+    border-radius: 100px;
+    animation: fadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    opacity: 0;
+}
+
+.headline {
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 7vw, 6rem);
+    font-weight: var(--fw-light);
+    line-height: 0.95;
+    letter-spacing: -0.04em;
+    color: var(--ls-white);
+    margin-bottom: var(--space-lg);
+    animation: fadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.1s forwards;
+    opacity: 0;
+}
+
+/* Editorial italic accent on "actually" */
+.accent {
+    font-style: italic;
+    font-weight: var(--fw-regular);
+    letter-spacing: -0.02em;
+    color: var(--ls-ivory-muted);
+}
+
+.sub {
+    font-family: var(--font-body);
+    font-size: clamp(1.1rem, 2vw, 1.4rem);
+    line-height: 1.6;
+    color: var(--ls-ivory-muted);
+    max-width: 50ch;
+    animation: fadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
+    opacity: 0;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        min-height: 65vh;
+        padding: calc(var(--nav-height) + var(--space-xl)) 0 var(--space-xl);
+    }
+
+    .orbital {
+        opacity: 0.4;
+    }
+}

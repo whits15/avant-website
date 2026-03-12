@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
+import AboutHero from "@/components/AboutHero";
 import Problem from "@/components/Problem";
 import HowItWorks from "@/components/HowItWorks";
 import Differentiators from "@/components/Differentiators";
 import FAQ from "@/components/FAQ";
+import CtaSection from "@/components/CtaSection";
 
 export const metadata: Metadata = {
     title: "About",
@@ -13,27 +15,12 @@ export const metadata: Metadata = {
 export default function AboutPage() {
     return (
         <>
-            <div style={{ height: "var(--nav-height)" }} />
+            <AboutHero />
             <Problem />
             <HowItWorks />
             <Differentiators />
             <FAQ />
-            <section className="section" style={{ textAlign: "center" }}>
-                <div className="container">
-                    <h2 className="section-title" style={{ maxWidth: "none" }}>
-                        Ready to get started?
-                    </h2>
-                    <p
-                        className="section-subtitle"
-                        style={{ margin: "0 auto var(--space-lg)" }}
-                    >
-                        Book a free assessment — no strings attached.
-                    </p>
-                    <a href="/contact#booking" className="btn btn--primary">
-                        Book Free Assessment
-                    </a>
-                </div>
-            </section>
+            <CtaSection />
         </>
     );
 }

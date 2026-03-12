@@ -1,7 +1,13 @@
 "use client";
 
-import { useReveal } from "@/hooks/useReveal";
+import dynamic from "next/dynamic";
+import ScrollReveal from "@/components/ScrollReveal";
 import styles from "./HowItWorks.module.css";
+
+const DataStream = dynamic(() => import("@/components/DataStream"), {
+    ssr: false,
+    loading: () => <div className={styles.streamFallback} />,
+});
 
 const STEPS = [
     {
@@ -28,29 +34,45 @@ const STEPS = [
 ];
 
 export default function HowItWorks() {
-    const { ref, revealed } = useReveal();
-
     return (
-        <section className={`section ${styles.section}`} id="how-it-works">
-            <div className={`container reveal ${revealed ? "revealed" : ""}`} ref={ref}>
-                <p className="section-label">How It Works</p>
-                <h2 className="section-title">Three steps. Real results.</h2>
-                <p className="section-subtitle">
-                    Every engagement starts with understanding your business. We never
-                    sell a solution without diagnosing the problem first.
-                </p>
+        <section className={styles.section} id="how-it-works">
+            <div className={styles.stream}>
+                <DataStream />
+            </div>
 
-                <div className={styles.steps}>
-                    {STEPS.map((step) => (
-                        <div key={step.number} className={styles.step}>
-                            <span className={styles.stepNumber}>{step.number}</span>
-                            <h3 className={styles.stepTitle}>{step.title}</h3>
-                            <p className={styles.stepDesc}>{step.description}</p>
-                            <div className={styles.outcome}>
-                                <span className={styles.outcomeIcon}>→</span>
-                                <span className={styles.outcomeText}>{step.outcome}</span>
+            <div className={`container ${styles.content}`}>
+                <ScrollReveal>
+                    <p className="section-label">How It Works</p>
+                    <h2 className={styles.title}>Three steps. Real results.</h2>
+                    <p className={styles.subtitle}>
+                        Every engagement starts with understanding your business. We never
+                        sell a solution without diagnosing the problem first.
+                    </p>
+                </ScrollReveal>
+
+                <div className={styles.timeline}>
+                    {STEPS.map((step, i) => (
+                        <ScrollReveal key={step.number} delay={200 + i * 250}>
+                            <div className={styles.step}>
+                                <div className={styles.stepLeft}>
+                                    <span className={styles.stepNumber}>{step.number}</span>
+                                </div>
+                                <div className={styles.stepLine}>
+                                    <span className={styles.stepDot} />
+                                    {i < STEPS.length - 1 && (
+                                        <span className={styles.stepConnector} />
+                                    )}
+                                </div>
+                                <div className={styles.stepRight}>
+                                    <h3 className={styles.stepTitle}>{step.title}</h3>
+                                    <p className={styles.stepDesc}>{step.description}</p>
+                                    <div className={styles.outcome}>
+                                        <span className={styles.outcomeIcon}>→</span>
+                                        <span className={styles.outcomeText}>{step.outcome}</span>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
+                        </ScrollReveal>
                     ))}
                 </div>
             </div>

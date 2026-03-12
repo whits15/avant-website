@@ -1,6 +1,6 @@
 "use client";
 
-import { useReveal } from "@/hooks/useReveal";
+import ScrollReveal from "@/components/ScrollReveal";
 import styles from "./Differentiators.module.css";
 
 const ATTRIBUTES = [
@@ -13,33 +13,32 @@ const ATTRIBUTES = [
 ];
 
 export default function Differentiators() {
-    const { ref, revealed } = useReveal();
-
     return (
         <section className={`section ${styles.section}`}>
-            <div className={`container reveal ${revealed ? "revealed" : ""}`} ref={ref}>
-                <p className="section-label">Why Avant</p>
-                <h2 className="section-title">
-                    Built for businesses that build Ontario.
-                </h2>
-                <p className="section-subtitle">
-                    Avant — Go Forward. We don&apos;t
-                    theorize from the sidelines; we build the craft and steer it
-                    with you.
-                </p>
+            <div className={`container ${styles.content}`}>
+                <ScrollReveal>
+                    <p className="section-label">Why Avant</p>
+                    <h2 className="section-title">
+                        Built for businesses that build Ontario.
+                    </h2>
+                    <p className="section-subtitle">
+                        We don&apos;t theorize from the sidelines — we build the
+                        craft and steer it with you.
+                    </p>
+                </ScrollReveal>
 
-                <div className={styles.table}>
-                    <div className={styles.tableHeader}>
-                        <span />
-                        <span className={styles.headerUs}>Avant</span>
-                        <span className={styles.headerThem}>Big Firms</span>
-                    </div>
-                    {ATTRIBUTES.map((attr) => (
-                        <div key={attr.label} className={styles.tableRow}>
-                            <span className={styles.rowLabel}>{attr.label}</span>
-                            <span className={styles.rowUs}>{attr.us}</span>
-                            <span className={styles.rowThem}>{attr.them}</span>
-                        </div>
+                <div className={styles.grid}>
+                    {ATTRIBUTES.map((attr, i) => (
+                        <ScrollReveal key={attr.label} delay={100 + i * 100}>
+                            <div className={styles.card}>
+                                <span className={styles.cardTag}>{attr.label}</span>
+                                <h3 className={styles.cardValue}>{attr.us}</h3>
+                                <p className={styles.cardThem}>
+                                    <span className={styles.themX} aria-hidden="true">×</span>
+                                    {attr.them}
+                                </p>
+                            </div>
+                        </ScrollReveal>
                     ))}
                 </div>
             </div>
