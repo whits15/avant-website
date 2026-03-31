@@ -44,7 +44,7 @@ export default function CaseStudiesPage() {
                     <ScrollReveal>
                         <p className="section-label">Our Work</p>
                         <h1 className="section-title">Case Studies</h1>
-                        <p className="section-subtitle">
+                        <p className="section-subtitle" style={{ margin: "0 auto" }}>
                             Real results from real engagements. Here&apos;s what
                             happens when AI meets operations.
                         </p>
