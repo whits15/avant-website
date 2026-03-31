@@ -4,9 +4,10 @@ import ScrollReveal from "@/components/ScrollReveal";
 import styles from "./case-studies.module.css";
 
 export const metadata: Metadata = {
-    title: "Case Studies | Avant",
+    title: "Case Studies",
     description:
         "Real results from real AI engagements. See how Avant helps Ontario businesses save time, reduce errors, and streamline operations.",
+    alternates: { canonical: '/case-studies' },
 };
 
 const CASE_STUDIES = [

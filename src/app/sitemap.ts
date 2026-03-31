@@ -8,37 +8,37 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const sitemapData: MetadataRoute.Sitemap = [
         {
             url: `${baseUrl}`,
-            lastModified: new Date(),
+            lastModified: new Date('2026-03-23'),
             changeFrequency: 'weekly',
             priority: 1,
         },
         {
             url: `${baseUrl}/about`,
-            lastModified: new Date(),
+            lastModified: new Date('2026-03-23'),
             changeFrequency: 'monthly',
             priority: 0.8,
         },
         {
             url: `${baseUrl}/services`,
-            lastModified: new Date(),
+            lastModified: new Date('2026-03-23'),
             changeFrequency: 'monthly',
             priority: 0.8,
         },
         {
-            url: `${baseUrl}/industries`,
-            lastModified: new Date(),
+            url: `${baseUrl}/case-studies`,
+            lastModified: new Date('2026-03-23'),
             changeFrequency: 'monthly',
             priority: 0.8,
         },
         {
             url: `${baseUrl}/contact`,
-            lastModified: new Date(),
+            lastModified: new Date('2026-03-23'),
             changeFrequency: 'monthly',
             priority: 0.8,
         },
         {
             url: `${baseUrl}/blog`,
-            lastModified: new Date(),
+            lastModified: new Date('2026-03-23'),
             changeFrequency: 'weekly',
             priority: 0.8,
         },
@@ -55,7 +55,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
                 sitemapData.push({
                     url: `${baseUrl}/blog/${slug}`,
                     lastModified: post.publishedAt ? new Date(post.publishedAt) : new Date(),
-                    changeFrequency: 'weekly',
                     priority: 0.6,
                 });
             }

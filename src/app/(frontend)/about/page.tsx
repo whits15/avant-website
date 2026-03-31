@@ -7,9 +7,10 @@ import Team from "@/components/Team";
 import CtaSection from "@/components/CtaSection";
 
 export const metadata: Metadata = {
-    title: "About",
+    title: "About Avant — Ontario AI Implementation Agency",
     description:
         "Why Ontario businesses choose Avant for AI implementation. Our approach, process, and what makes us different from big consulting firms.",
+    alternates: { canonical: '/about' },
 };
 
 export default function AboutPage() {

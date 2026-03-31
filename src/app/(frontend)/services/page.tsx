@@ -2,9 +2,10 @@ import type { Metadata } from "next";
 import Services from "@/components/Services";
 
 export const metadata: Metadata = {
-    title: "Services",
+    title: "AI Implementation Services for Ontario Businesses",
     description:
         "AI readiness sessions, implementation sprints, and monthly retainers for Ontario businesses. From free assessment to full AI strategy.",
+    alternates: { canonical: '/services' },
 };
 
 export default function ServicesPage() {

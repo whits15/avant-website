@@ -23,9 +23,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
     return {
         title: post.title,
-        description:
-            post.excerpt ||
-            `${typeof post.title === "string" ? post.title : slug} — Avant Blog`,
+        description: post.excerpt || `${typeof post.title === "string" ? post.title : slug} — Avant Blog`,
+        alternates: { canonical: `/blog/${slug}` },
+        openGraph: {
+            title: typeof post.title === "string" ? post.title : slug,
+            description: post.excerpt || '',
+            type: 'article',
+            publishedTime: post.publishedAt || undefined,
+            authors: post.author ? [post.author] : undefined,
+            images: post.coverImage ? [{ url: post.coverImage, width: 1200, height: 630 }] : undefined,
+        },
     };
 }
 

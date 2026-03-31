@@ -5,9 +5,10 @@ import BlogCard from "@/components/BlogCard";
 import styles from "./blog.module.css";
 
 export const metadata: Metadata = {
-    title: "Blog",
+    title: "AI Insights for Ontario Businesses",
     description:
         "Practical AI insights, guides, and case studies for Ontario businesses. Learn how to implement AI that delivers real ROI.",
+    alternates: { canonical: '/blog' },
 };
 
 const reader = createReader(process.cwd(), keystaticConfig);
