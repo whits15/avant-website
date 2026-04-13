@@ -1,0 +1,6 @@
+.page {
+  min-height: 100vh;
+  background: var(--ls-charcoal);
+  color: var(--ls-ivory);
+  font-family: var(--font-body);
+}

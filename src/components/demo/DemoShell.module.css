@@ -1,0 +1,30 @@
+.shell {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background: var(--ls-charcoal);
+  overflow: hidden;
+  position: relative;
+  font-family: var(--font-body);
+  color: var(--ls-ivory);
+  animation: fadeInUp 0.8s var(--ease-out) both;
+}
+
+.main {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--space-lg);
+  background: var(--ls-charcoal);
+}
+
+@media (max-width: 768px) {
+  .shell {
+    flex-direction: column;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .main {
+    padding: var(--space-md);
+  }
+}

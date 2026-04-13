@@ -1,0 +1,72 @@
+.hotDeals {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: var(--fs-small);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--ls-wide);
+  text-transform: uppercase;
+  color: var(--ls-ivory-muted);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 100px 60px;
+  gap: var(--space-xs);
+  align-items: center;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.company {
+  font-size: var(--fs-small);
+  font-weight: var(--fw-medium);
+  color: var(--ls-ivory);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.contact {
+  font-size: var(--fs-xs);
+  color: var(--ls-slate);
+}
+
+.barTrack {
+  height: 8px;
+  background: var(--ls-charcoal-mid);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.barFill {
+  height: 100%;
+  background: var(--demo-accent);
+  border-radius: 4px;
+  animation: growWidth 0.5s var(--ease-out) both;
+}
+
+@keyframes growWidth {
+  from { width: 0 !important; }
+}
+
+.value {
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  color: var(--demo-accent);
+  text-align: right;
+}

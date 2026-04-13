@@ -1,0 +1,73 @@
+.funnel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: var(--fs-small);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--ls-wide);
+  text-transform: uppercase;
+  color: var(--ls-ivory-muted);
+}
+
+.bars {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 120px 1fr 30px 60px;
+  gap: var(--space-xs);
+  align-items: center;
+}
+
+.stage {
+  font-size: var(--fs-xs);
+  color: var(--ls-ivory-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.barTrack {
+  height: 24px;
+  background: var(--ls-charcoal-mid);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.barFill {
+  height: 100%;
+  background: var(--demo-accent);
+  border-radius: 4px;
+  min-width: 4px;
+  animation: growWidth 0.6s var(--ease-out) both;
+}
+
+@keyframes growWidth {
+  from { width: 0 !important; }
+}
+
+.count {
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  color: var(--ls-ivory);
+  text-align: center;
+}
+
+.total {
+  font-size: var(--fs-xs);
+  color: var(--ls-slate);
+  text-align: right;
+}
+
+@media (max-width: 768px) {
+  .row {
+    grid-template-columns: 100px 1fr 30px 50px;
+  }
+}

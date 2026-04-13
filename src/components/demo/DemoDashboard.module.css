@@ -1,0 +1,62 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  max-width: 1100px;
+}
+
+.header {
+  animation: fadeInUp 0.5s var(--ease-out) both;
+}
+
+.greeting {
+  font-family: var(--font-display);
+  font-size: var(--fs-h2);
+  font-weight: var(--fw-bold);
+  color: var(--ls-white);
+  margin-bottom: 4px;
+}
+
+.date {
+  font-size: var(--fs-small);
+  color: var(--ls-slate);
+}
+
+.kpiGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-sm);
+  animation: fadeInUp 0.6s var(--ease-out) 0.1s both;
+}
+
+.middleRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-sm);
+  animation: fadeInUp 0.6s var(--ease-out) 0.2s both;
+}
+
+.funnelWrapper,
+.hotDealsWrapper {
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid var(--glass-border);
+  border-radius: var(--border-radius);
+  padding: var(--space-md);
+}
+
+@media (max-width: 1024px) {
+  .kpiGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .kpiGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .middleRow {
+    grid-template-columns: 1fr;
+  }
+}
