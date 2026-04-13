@@ -1,88 +1,55 @@
-"use client";
-
-import { useState } from "react";
 import styles from "./Services.module.css";
 
 const STAGES = [
     {
-        label: "Explore",
-        title: "AI Opportunity Assessment",
-        timeline: "30–45 min",
+        label: "Discover",
+        title: "Discovery & Scoping",
+        timeline: "1–2 weeks",
         description:
-            "A diagnostic call where we review your current tools and workflows, identify your top three automation opportunities, and estimate ROI. You get a one-page AI Opportunity Summary within 48 hours — whether or not you work with us.",
-        cta: "Book Your Assessment",
-        ctaHref: "#contact",
+            "We learn your business inside and out — your workflows, pain points, data landscape, and goals. You get a detailed project scope and architecture proposal, so you know exactly what we're building and why.",
+        cta: "Book a Discovery Call",
+        ctaHref: "/contact#booking",
     },
     {
-        label: "Learn",
-        title: "AI Readiness Session",
-        timeline: "Half day",
+        label: "Design",
+        title: "System Architecture & UX",
+        timeline: "2–3 weeks",
         description:
-            "A hands-on session where your team leaves with working AI tools, not just concepts. Three modules: activate AI you're already paying for, build your first AI assistant, and create live automations connecting your core tools.",
-        details: [
-            "Activate AI features in QuickBooks, your CRM, Copilot, or Google Workspace",
-            "Hands-on with ChatGPT and Claude for email, documents, and meetings",
-            "Build 2–3 live Zapier workflows during the session",
-            "Personalized AI Action Plan within 48 hours",
-        ],
-        cta: "Book a Conversation",
-        ctaHref: "#contact",
+            "We design your CRM or application from the ground up — data models, AI integration points, user flows, and security architecture. You review interactive prototypes before a single line of production code is written.",
+        cta: "Learn More",
+        ctaHref: "/contact#booking",
     },
     {
-        label: "Implement",
-        title: "AI Implementation Sprints",
-        timeline: "2–4 weeks per sprint",
+        label: "Build",
+        title: "Development & AI Integration",
+        timeline: "4–8 weeks",
         description:
-            "Focused engagements that solve one specific workflow problem. Every sprint: audit (week 1), build (week 2), train (week 3), optimize (week 4). Includes working system, team training, and 30-day ROI scorecard.",
-        sprints: [
-            {
-                name: "AI Knowledge Base",
-                desc: "Internal AI assistant trained on your company documents and SOPs. Target: new employee ramp time cut in half.",
-            },
-            {
-                name: "24/7 Support Agent",
-                desc: "AI customer support that handles common inquiries around the clock. Target: 50%+ queries resolved without a human.",
-            },
-            {
-                name: "CRM Intelligence Upgrade",
-                desc: "Activate AI in your CRM — lead scoring, deal predictions, automated follow-ups. Target: 25–30% conversion improvement.",
-            },
-            {
-                name: "Client Intake Accelerator",
-                desc: "AI-powered intake with smart forms, automated document collection, and CRM integration. Target: 70% faster intake.",
-            },
-            {
-                name: "HR & Onboarding Automation",
-                desc: "Automated onboarding sequences and employee FAQ bot. Target: onboarding from 2 weeks to 2 days.",
-            },
-        ],
-        cta: "Contact for Proposal",
-        ctaHref: "#contact",
+            "We build your system with production-grade code, integrate AI where it creates real value — smart automation, intelligent search, predictive insights — and deploy on secure infrastructure you control.",
+        cta: "Get a Proposal",
+        ctaHref: "/contact#booking",
     },
     {
-        label: "Grow",
-        title: "Monthly AI Retainer",
-        timeline: "Ongoing partnership",
+        label: "Launch",
+        title: "Deployment & Training",
+        timeline: "1–2 weeks",
         description:
-            "Fractional Chief AI Officer support. Monthly roadmap reviews, performance monitoring, new tool evaluations, team training, and government grant navigation to offset 50–80% of your AI investment.",
-        cta: "Contact for Proposal",
-        ctaHref: "#contact",
+            "We launch your system, train your team hands-on, and ensure everything runs smoothly in production. Post-launch support included to handle any adjustments as your team gets up to speed.",
+        cta: "Start a Project",
+        ctaHref: "/contact#booking",
     },
 ];
 
 export default function Services() {
-    const [expandedSprint, setExpandedSprint] = useState<number | null>(null);
-
     return (
         <section className={`section ${styles.services}`} id="services">
             <div className="container">
                 <p className="section-label">Services</p>
                 <h2 className="section-title">
-                    A clear path from curiosity to results.
+                    From concept to production.
                 </h2>
                 <p className="section-subtitle">
-                    No obligation to progress through every stage. We recommend the right
-                    starting point based on your assessment.
+                    A structured process for building custom software — scoped, designed,
+                    and delivered.
                 </p>
 
                 <div className={styles.ladder}>
@@ -109,37 +76,6 @@ export default function Services() {
                                 </div>
 
                                 <p className={styles.stageDesc}>{stage.description}</p>
-
-                                {stage.details && (
-                                    <ul className={styles.details}>
-                                        {stage.details.map((d) => (
-                                            <li key={d}>{d}</li>
-                                        ))}
-                                    </ul>
-                                )}
-
-                                {stage.sprints && (
-                                    <div className={styles.sprints}>
-                                        {stage.sprints.map((sprint, si) => (
-                                            <button
-                                                key={sprint.name}
-                                                className={`${styles.sprint} ${expandedSprint === si ? styles.sprintOpen : ""}`}
-                                                onClick={() =>
-                                                    setExpandedSprint(expandedSprint === si ? null : si)
-                                                }
-                                            >
-                                                <div className={styles.sprintHeader}>
-                                                    <span className={styles.sprintName}>
-                                                        {sprint.name}
-                                                    </span>
-                                                </div>
-                                                {expandedSprint === si && (
-                                                    <p className={styles.sprintDesc}>{sprint.desc}</p>
-                                                )}
-                                            </button>
-                                        ))}
-                                    </div>
-                                )}
 
                                 <a href={stage.ctaHref} className="btn btn--secondary">
                                     {stage.cta}

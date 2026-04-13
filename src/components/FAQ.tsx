@@ -6,28 +6,16 @@ import styles from "./FAQ.module.css";
 
 const FAQS = [
     {
-        q: "Do I need technical staff to use these services?",
-        a: "No. Our readiness sessions and sprints are designed for non-technical teams. We handle the setup and integration — your team just needs to show up and learn.",
+        q: "Why build a custom CRM instead of using Salesforce or HubSpot?",
+        a: "Off-the-shelf CRMs force you to work around their limitations. A custom CRM is built around your actual sales process, with AI that automates the specific tasks your team wastes time on — not generic features you'll never use.",
     },
     {
-        q: "What if we already use ChatGPT?",
-        a: "Great — you're ahead of most. But basic prompts are just the tip of the iceberg. Our AI Readiness Session shows you how to use ChatGPT and Claude for role-specific workflows, and how to connect AI to your actual business tools through automation.",
+        q: "How do you keep our data secure with AI?",
+        a: "We prioritize local and private AI deployments — your data stays on your infrastructure, not on third-party servers. When cloud AI is the right fit, we implement strict access controls, encryption/local redaction, and data isolation so nothing leaks.",
     },
     {
-        q: "How fast will we see ROI?",
-        a: "Teams typically see time savings within the first week of engagement. Sprint implementations deliver measurable ROI within 30 days — we include a scorecard to prove it.",
-    },
-    {
-        q: "How are you different from Deloitte or Accenture?",
-        a: "They sell six-month strategy decks with open-ended retainers. We deliver working tools with flat-fee engagements scoped to your actual needs — built for businesses under 200 employees.",
-    },
-    {
-        q: "Is the free assessment actually free?",
-        a: "Yes. No strings, no obligation. You get a one-page AI Opportunity Summary with specific recommendations. Most businesses find at least one quick win worth pursuing — but that's your call.",
-    },
-{
-        q: "What tools do you work with?",
-        a: "We integrate with whatever you already use: HubSpot, Salesforce, Pipedrive, QuickBooks, Google Workspace, Microsoft 365, Zapier, and more. We don't force you onto new platforms.",
+        q: "How long does a custom build take?",
+        a: "Most projects go from discovery to a working product in 2–6 weeks. We scope aggressively to get a real system in your hands fast, then iterate based on real usage.",
     },
 ];
 

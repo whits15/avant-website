@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import ScrollReveal from "@/components/ScrollReveal";
+import CaseStudyHeader from "@/components/CaseStudyHeader";
 import styles from "./case-study.module.css";
 
 const CASE_STUDIES = [
@@ -57,8 +58,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     if (!cs) return { title: "Case Study Not Found" };
 
     return {
-        title: `${cs.headline} — ${cs.industry} | Avant`,
+        title: { absolute: `${cs.headline} — ${cs.industry} | Avant` },
         description: cs.description,
+        alternates: { canonical: `https://www.avantai.ca/case-studies/${slug}` },
     };
 }
 
@@ -68,21 +70,32 @@ export default async function CaseStudyPage({ params }: Props) {
 
     if (!cs) notFound();
 
+    const breadcrumbJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.avantai.ca" },
+            { "@type": "ListItem", "position": 2, "name": "Case Studies", "item": "https://www.avantai.ca/case-studies" },
+            { "@type": "ListItem", "position": 3, "name": cs.headline, "item": `https://www.avantai.ca/case-studies/${slug}` },
+        ],
+    };
+
     return (
         <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+            />
             <div style={{ height: "var(--nav-height)" }} />
+
+            <CaseStudyHeader
+                industry={cs.industry}
+                headline={cs.headline}
+                description={cs.description}
+            />
 
             <article className={styles.article}>
                 <div className={styles.narrow}>
-                    <ScrollReveal>
-                        <a href="/case-studies" className={styles.back}>
-                            ← Back to Case Studies
-                        </a>
-                        <span className={styles.industry}>{cs.industry}</span>
-                        <h1 className={styles.title}>{cs.headline}</h1>
-                        <p className={styles.description}>{cs.description}</p>
-                    </ScrollReveal>
-
                     <ScrollReveal delay={200}>
                         <div className={styles.section}>
                             <span className={styles.sectionLabel}>

@@ -11,19 +11,19 @@ const DataStream = dynamic(() => import("@/components/DataStream"), {
 
 const STEPS = [
     {
-        title: "Audit",
+        title: "Discover",
         description:
-            "We map your operations and find the highest-ROI automation opportunities — so you skip the expensive trial-and-error.",
+            "We dig into your operations, pain points, and data flows to understand exactly where custom software and AI can create the most impact.",
     },
     {
-        title: "Integrate",
+        title: "Design",
         description:
-            "We connect AI directly to your CRMs, ERPs, and databases. Your existing software gets smarter — not replaced.",
+            "We architect your CRM or application from the ground up — AI-native, secure by default, and shaped around how your team actually works.",
     },
     {
-        title: "Deploy",
+        title: "Deliver",
         description:
-            "We build custom AI agents, deploy them into your workflows, and train your team to manage them independently.",
+            "We build, test, and launch your system with hands-on training. You get production-ready software, not a prototype.",
     },
 ];
 
@@ -38,11 +38,11 @@ export default function WhatWeDo() {
                 <ScrollReveal>
                     <p className="section-label">What We Do</p>
                     <h2 className={styles.title}>
-                        Audit. Integrate. Deploy.
+                        Discover. Design. Deliver.
                     </h2>
                     <p className={styles.subtitle}>
-                        Three steps from AI curiosity to working systems inside
-                        your business.
+                        From first conversation to production-ready software —
+                        custom-built for how your business actually runs.
                     </p>
                 </ScrollReveal>
 

@@ -1,8 +1,4 @@
 import type { Metadata } from "next";
-import AboutHero from "@/components/AboutHero";
-import Problem from "@/components/Problem";
-import HowItWorks from "@/components/HowItWorks";
-import Differentiators from "@/components/Differentiators";
 import Team from "@/components/Team";
 import CtaSection from "@/components/CtaSection";
 
@@ -16,10 +12,6 @@ export const metadata: Metadata = {
 export default function AboutPage() {
     return (
         <>
-            <AboutHero />
-            <Problem />
-            <HowItWorks />
-            <Differentiators />
             <Team />
             <CtaSection />
             <script
@@ -32,6 +24,47 @@ export default function AboutPage() {
                         { "@type": "ListItem", "position": 2, "name": "About", "item": "https://www.avantai.ca/about" }
                     ]
                 }) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify([
+                    {
+                        "@context": "https://schema.org",
+                        "@type": "Person",
+                        "name": "Patrick Alpaugh",
+                        "jobTitle": "Co-Founder",
+                        "worksFor": { "@type": "Organization", "@id": "https://www.avantai.ca/#organization" },
+                        "url": "https://www.avantai.ca/about",
+                        "sameAs": ["https://www.linkedin.com/in/patrick-alpaugh/"]
+                    },
+                    {
+                        "@context": "https://schema.org",
+                        "@type": "Person",
+                        "name": "Keegan Whitney",
+                        "jobTitle": "Co-Founder",
+                        "worksFor": { "@type": "Organization", "@id": "https://www.avantai.ca/#organization" },
+                        "url": "https://www.avantai.ca/about",
+                        "sameAs": ["https://www.linkedin.com/in/keegan-whitney-mba-8b8644217"]
+                    },
+                    {
+                        "@context": "https://schema.org",
+                        "@type": "Person",
+                        "name": "James Parker",
+                        "jobTitle": "Co-Founder",
+                        "worksFor": { "@type": "Organization", "@id": "https://www.avantai.ca/#organization" },
+                        "url": "https://www.avantai.ca/about",
+                        "sameAs": ["https://www.linkedin.com/in/james-parker-mba/"]
+                    },
+                    {
+                        "@context": "https://schema.org",
+                        "@type": "Person",
+                        "name": "Gavan Hanspal",
+                        "jobTitle": "Co-Founder",
+                        "worksFor": { "@type": "Organization", "@id": "https://www.avantai.ca/#organization" },
+                        "url": "https://www.avantai.ca/about",
+                        "sameAs": ["https://www.linkedin.com/in/gavan-hanspal/"]
+                    }
+                ]) }}
             />
         </>
     );

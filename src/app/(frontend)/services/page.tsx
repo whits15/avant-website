@@ -12,6 +12,7 @@ export default function ServicesPage() {
     return (
         <>
             <div style={{ height: "var(--nav-height)" }} />
+            <h1 className="sr-only">AI Implementation Services for Ontario Businesses</h1>
             <Services />
             <section className="section" style={{ textAlign: "center" }}>
                 <div className="container">
@@ -93,6 +94,47 @@ export default function ServicesPage() {
                                 "provider": { "@id": "https://www.avantai.ca/#organization" },
                                 "areaServed": { "@type": "AdministrativeArea", "name": "Ontario, Canada" },
                                 "offers": { "@type": "Offer", "price": "3000", "priceCurrency": "CAD", "description": "$3,000–$5,000/month" }
+                            }
+                        }
+                    ]
+                }) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "FAQPage",
+                    "mainEntity": [
+                        {
+                            "@type": "Question",
+                            "name": "Do we need technical staff to work with Avant?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "No. Avant handles all technical implementation. Your team participates in discovery and training, but no technical expertise is required."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "How quickly will we see ROI from AI implementation?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "ROI is typically visible within the first week of an implementation sprint, with measurable 30-day returns tracked via our ROI scorecard."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "How is Avant different from large consulting firms?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Avant uses flat-fee engagements with working systems delivered in weeks, not months. No open-ended retainers or strategy decks — just deployed AI tools integrated into your workflows."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "Can AI integrate with our existing software?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Yes. Avant integrates with platforms like HubSpot, Salesforce, Pipedrive, QuickBooks, Google Workspace, and more."
                             }
                         }
                     ]

@@ -1,24 +1,51 @@
 .hero {
-    padding: var(--space-section) 0 var(--space-xl);
+    padding: var(--space-lg) 0 var(--space-lg);
     text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.stream {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    opacity: 0.4;
+    pointer-events: none;
+}
+
+.streamFallback {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        ellipse at 50% 50%,
+        rgba(74, 144, 217, 0.04) 0%,
+        transparent 60%
+    );
+}
+
+.content {
+    position: relative;
+    z-index: 1;
 }
 
 .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: var(--space-lg);
-    margin-top: var(--space-xl);
+    margin-top: var(--space-md);
 }
 
 .card {
-    background: var(--ls-charcoal-light);
+    background: rgba(26, 26, 31, 0.015);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
     border: 1px solid var(--glass-border);
     border-radius: var(--border-radius);
     padding: var(--space-lg);
     text-decoration: none;
     display: block;
     position: relative;
-    transition: transform var(--duration-medium) var(--ease-out),
+    transition: border-color 0.4s ease, transform var(--duration-medium) var(--ease-out),
         box-shadow var(--duration-medium) var(--ease-out);
 }
 
@@ -103,5 +130,9 @@
 @media (max-width: 768px) {
     .grid {
         grid-template-columns: 1fr;
+    }
+
+    .stream {
+        opacity: 0.3;
     }
 }

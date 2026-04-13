@@ -11,16 +11,16 @@ const OrbitalNetwork = dynamic(() => import("@/components/OrbitalNetwork"), {
 
 const OFFERINGS = [
     {
-        tag: "Implementation",
-        title: "AI Implementation Sprints",
+        tag: "CRM Design",
+        title: "Custom CRM Systems",
         description:
-            "We audit your workflows, build custom AI systems that plug into your existing software, and train your team to run them — in weeks, not months.",
+            "CRMs designed from scratch with AI baked in — smart lead scoring, automated follow-ups, intelligent reporting. Built around how your team actually works, not the other way around.",
     },
     {
-        tag: "Leadership",
-        title: "Fractional AI Officer",
+        tag: "Software",
+        title: "Secure AI Software",
         description:
-            "Ongoing strategic AI leadership without a six-figure hire. Monthly roadmaps, performance monitoring, and new tool evaluations to keep you ahead.",
+            "Custom-built applications with local or private AI integrations. Your data stays on your infrastructure — no third-party exposure. Purpose-built for your specific workflows and security requirements.",
     },
 ];
 
@@ -36,12 +36,12 @@ export default function WhoWeAre() {
                     <ScrollReveal>
                         <p className="section-label">Who We Are</p>
                         <h2 className={styles.title}>
-                            We implement AI.
+                            We build software that thinks.
                         </h2>
                         <p className={styles.subtitle}>
-                            Not decks. Not theory. Working systems built into
-                            your business — tailored to your workflows, your
-                            software, your team.
+                            Custom CRMs. Purpose-built software. AI that runs on
+                            your terms — secure, local, and tailored to your
+                            workflows.
                         </p>
                     </ScrollReveal>
 

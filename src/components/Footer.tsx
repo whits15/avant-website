@@ -11,8 +11,8 @@ export default function Footer() {
                 </div>
 
                 <div className={styles.links}>
-                    <Link href="/services">Services</Link>
                     <Link href="/about">About</Link>
+                    <Link href="/case-studies">Case Studies</Link>
                     <Link href="/blog">Blog</Link>
                     <Link href="/contact">Contact</Link>
                 </div>

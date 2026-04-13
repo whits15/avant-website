@@ -10,10 +10,10 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: var(--space-lg);
   width: 100%;
-  max-width: 1100px;
+  max-width: 900px;
   margin-top: var(--space-xl);
 }
 
@@ -78,7 +78,7 @@
 
 .name {
   font-family: var(--font-display);
-  font-size: var(--fs-h3);
+  font-size: clamp(1.1rem, 1.8vw, 1.35rem);
   font-weight: var(--fw-semibold);
   color: var(--ls-ivory);
   line-height: var(--lh-heading);
@@ -86,21 +86,21 @@
 }
 
 .role {
-  font-size: var(--fs-small);
+  font-size: var(--fs-xs);
   font-weight: var(--fw-medium);
   color: var(--ls-accent);
   text-transform: uppercase;
   letter-spacing: var(--ls-widest);
-  margin-bottom: var(--space-md);
+  margin-bottom: var(--space-sm);
 }
 
 .bio {
   font-family: var(--font-body);
-  font-size: var(--fs-small);
-  line-height: var(--lh-body);
+  font-size: 1rem;
+  line-height: 1.65;
   color: var(--ls-ivory-muted);
   text-align: left;
-  max-width: 280px;
+  max-width: 340px;
 }
 
 @media (max-width: 768px) {

@@ -18,25 +18,25 @@ export default function CtaSection() {
             <div className={`container ${styles.ctaContent}`}>
                 <ScrollReveal>
                     <h2 className={styles.ctaTitle}>
-                        Ready to put AI<br />to work?
+                        Ready for software<br />that actually fits?
                     </h2>
                     <p className={styles.ctaSub}>
-                        Start with a free, no-obligation assessment.
-                        We&apos;ll map your biggest opportunities and show
-                        you exactly where AI fits.
+                        Custom CRMs and AI-powered tools — built around
+                        your workflow, not the other way around.
+                        Let&apos;s talk about what you need.
                     </p>
                     <div className={styles.ctaButtons}>
                         <a
                             href="/contact#booking"
                             className={styles.ctaPrimary}
                         >
-                            Book Free Assessment
+                            Start a Conversation
                         </a>
                         <a
-                            href="/services"
+                            href="/case-studies"
                             className={styles.ctaPrimary}
                         >
-                            Explore Services →
+                            View Case Studies →
                         </a>
                     </div>
                 </ScrollReveal>

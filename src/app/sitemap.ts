@@ -42,6 +42,24 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
             changeFrequency: 'weekly',
             priority: 0.8,
         },
+        {
+            url: `${baseUrl}/case-studies/law-firm-document-automation`,
+            lastModified: new Date('2026-03-23'),
+            changeFrequency: 'monthly',
+            priority: 0.7,
+        },
+        {
+            url: `${baseUrl}/case-studies/professional-services-client-intake`,
+            lastModified: new Date('2026-03-23'),
+            changeFrequency: 'monthly',
+            priority: 0.7,
+        },
+        {
+            url: `${baseUrl}/case-studies/internal-crm-workflow-automation`,
+            lastModified: new Date('2026-03-23'),
+            changeFrequency: 'monthly',
+            priority: 0.7,
+        },
     ];
 
     try {

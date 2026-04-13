@@ -19,8 +19,8 @@ export default function Hero() {
           Go Forward.
         </h1>
         <p className={styles.subheadline}>
-          We help established Ontario businesses deploy reliable, secure, and profitable Artificial Intelligence systems.
-          Real ROI. No hype.
+          We design custom CRMs and build software with secure, intelligent AI — tailored to how your business actually works.
+          Real systems. No hype.
         </p>
 
         <div className={styles.actionsBlock}>

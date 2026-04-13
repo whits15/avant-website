@@ -28,13 +28,23 @@ export default function FrontendLayout({
                 dangerouslySetInnerHTML={{ __html: JSON.stringify([
                     {
                         "@context": "https://schema.org",
-                        "@type": "Organization",
+                        "@type": "ProfessionalService",
                         "@id": "https://www.avantai.ca/#organization",
                         "name": "Avant",
                         "url": "https://www.avantai.ca",
                         "description": "Avant helps Ontario small and medium businesses deploy reliable, secure, and profitable AI systems.",
                         "areaServed": { "@type": "AdministrativeArea", "name": "Ontario, Canada" },
-                        "sameAs": []
+                        "priceRange": "$500 - $5,000/month",
+                        "address": {
+                            "@type": "PostalAddress",
+                            "addressRegion": "Ontario",
+                            "addressCountry": "CA"
+                        },
+                        "sameAs": [
+                            "https://www.linkedin.com/in/patrick-alpaugh/",
+                            "https://www.linkedin.com/in/keegan-whitney-mba-8b8644217",
+                            "https://www.linkedin.com/in/james-parker-mba/"
+                        ]
                     },
                     {
                         "@context": "https://schema.org",
