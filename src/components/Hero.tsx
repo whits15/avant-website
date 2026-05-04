@@ -21,7 +21,7 @@ export default function Hero() {
         </h1>
         <p className={styles.subheadline}>
           AI implementation consulting for Canadian private equity, venture capital, and family offices.
-          Simple workflows. Claude enablement. Real systems shipped fast.
+          Simple workflows. Claude enablement. Working systems shipped in 2–4 weeks.
         </p>
 
         <div className={styles.actionsBlock}>

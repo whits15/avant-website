@@ -12,11 +12,11 @@ const DataStream = dynamic(() => import("@/components/DataStream"), {
 
 const CASE_STUDIES = [
     {
-        slug: "law-firm-document-automation",
-        industry: "Legal",
-        headline: "10+ hours/week saved",
+        slug: "pe-nda-review-automation",
+        industry: "Private Equity",
+        headline: "Hours saved on every NDA",
         description:
-            "Automated document intake and contract review for a mid-size Ontario law firm.",
+            "An NDA review agent built for a Canadian private equity firm — clause-by-clause first-pass mark-ups against the partner's preferred positions.",
     },
     {
         slug: "vc-meeting-prep",

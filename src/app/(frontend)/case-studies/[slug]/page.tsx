@@ -7,16 +7,16 @@ import styles from "./case-study.module.css";
 
 const CASE_STUDIES = [
     {
-        slug: "law-firm-document-automation",
-        industry: "Legal",
-        headline: "10+ hours/week saved",
+        slug: "pe-nda-review-automation",
+        industry: "Private Equity",
+        headline: "Hours saved on every NDA",
         description:
-            "Automated document intake and contract review for a mid-size Ontario law firm.",
+            "An NDA review agent built for a Canadian private equity firm — clause-by-clause first-pass mark-ups against the partner's preferred positions.",
         situation:
-            "A growing law firm was losing billable hours to manual document processing. Intake forms, contract reviews, and client correspondence consumed significant staff time each week.",
-        built: "We deployed an AI-powered document processing pipeline that automatically extracts key terms from contracts, routes intake forms to the right team members, and drafts initial correspondence — all integrated with their existing practice management software.",
+            "A Canadian private equity firm was routing every incoming NDA through a single partner for mark-up before diligence could begin. The firm's scarcest resource was being spent on a largely pattern-based task — a bottleneck that slowed the entire deal cycle.",
+        built: "We built an NDA Review Agent in Claude Cowork, trained on the firm's NDA reference base and the partner's mark-up preferences. It compares incoming NDAs clause-by-clause against the firm's standard positions and produces a tracked-changes Word mark-up in house style — ready for partner review. A 30-day learning loop folds each round of edits back into the reference set so the agent improves across live deals.",
         outcome:
-            "The firm reclaimed over 10 hours per week of billable time, reduced document processing errors by 85%, and improved client response times from days to hours.",
+            "The partner's per-NDA review collapsed from a full read-and-redline to a quick approval pass. Associates now run the agent on incoming NDAs and surface a partner-ready mark-up — keeping the partner in the driver's seat while removing the first-pass drudgery and tightening consistency across the firm's NDA book.",
     },
     {
         slug: "vc-meeting-prep",

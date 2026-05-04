@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Services from "@/components/Services";
+import RapidAssessment from "@/components/RapidAssessment";
 import { BOOKING_URL } from "@/lib/booking";
 
 export const metadata: Metadata = {
@@ -14,6 +15,7 @@ export default function ServicesPage() {
         <>
             <div style={{ height: "var(--nav-height)" }} />
             <h1 className="sr-only">AI Implementation Services for Canadian PE, VC &amp; Family Offices</h1>
+            <RapidAssessment />
             <Services />
             <section className="section" style={{ textAlign: "center" }}>
                 <div className="container">
@@ -54,6 +56,17 @@ export default function ServicesPage() {
                             "position": 1,
                             "item": {
                                 "@type": "Service",
+                                "name": "Rapid AI Assessment",
+                                "description": "A 1-2 week engagement: site visit, structured interviews with key team members, and a written report with three to five ranked AI use cases — each with a scoped build estimate and projected ROI.",
+                                "provider": { "@id": "https://www.avantai.ca/#organization" },
+                                "areaServed": { "@type": "AdministrativeArea", "name": "Canada" }
+                            }
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "item": {
+                                "@type": "Service",
                                 "name": "AI Opportunity Assessment",
                                 "description": "A diagnostic call to identify your top three automation opportunities with estimated ROI.",
                                 "provider": { "@id": "https://www.avantai.ca/#organization" },
@@ -62,7 +75,7 @@ export default function ServicesPage() {
                         },
                         {
                             "@type": "ListItem",
-                            "position": 2,
+                            "position": 3,
                             "item": {
                                 "@type": "Service",
                                 "name": "AI Readiness Session",
@@ -73,7 +86,7 @@ export default function ServicesPage() {
                         },
                         {
                             "@type": "ListItem",
-                            "position": 3,
+                            "position": 4,
                             "item": {
                                 "@type": "Service",
                                 "name": "AI Implementation Sprints",
@@ -84,7 +97,7 @@ export default function ServicesPage() {
                         },
                         {
                             "@type": "ListItem",
-                            "position": 4,
+                            "position": 5,
                             "item": {
                                 "@type": "Service",
                                 "name": "Monthly AI Retainer",

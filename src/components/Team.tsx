@@ -28,7 +28,7 @@ const TEAM = [
     role: "Founder & CEO",
     bio: [
       "A seasoned analyst in both private equity and venture capital, he has also held sales and operations roles within PE and VC-backed companies. In his most recent role he introduced a breakthrough AI-powered inventory counting solution to the largest restaurant groups in Canada—and personally owned and serviced every one of those accounts.",
-      "Patrick founded this firm to bring that same technical mastery and proven commercial discipline to the Canadian PE/VC market. His mission is simple and urgent: to enable Bay Street to capture the extraordinary value from AI that Wall Street and Silicon Valley have already seized—faster, smarter, and with greater return than anyone else thought possible.",
+      "Patrick founded this firm to bring that same technical mastery and proven commercial discipline to Canadian PE, VC, and family offices. The mission is simple: ship working AI workflows in weeks, not quarters — so Canadian funds can move on opportunity at the speed the modern deal cycle demands.",
     ],
     image: "/images/team/patrick_headshot.jpeg",
   },

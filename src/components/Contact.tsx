@@ -144,7 +144,7 @@ export default function Contact() {
                             onChange={(e) =>
                                 setForm({ ...form, message: e.target.value })
                             }
-                            placeholder="Tell us about a workflow that wastes your team's time..."
+                            placeholder="Tell us where your team's time is leaking — and what that time would be worth back."
                         />
                     </div>
 

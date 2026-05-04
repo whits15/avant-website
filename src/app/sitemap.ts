@@ -43,8 +43,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
             priority: 0.8,
         },
         {
-            url: `${baseUrl}/case-studies/law-firm-document-automation`,
-            lastModified: new Date('2026-03-23'),
+            url: `${baseUrl}/case-studies/pe-nda-review-automation`,
+            lastModified: new Date('2026-05-04'),
             changeFrequency: 'monthly',
             priority: 0.7,
         },
