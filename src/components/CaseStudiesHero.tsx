@@ -16,7 +16,7 @@ const CASE_STUDIES = [
         industry: "Private Equity",
         headline: "Partner time back, every NDA",
         description:
-            "Contract analytics for a Canadian private equity firm — clause-by-clause first-pass NDA mark-ups in the partner's voice, deployed in two weeks.",
+            "Contract analytics that compress NDA review for a Canadian PE firm.",
     },
     {
         slug: "vc-meeting-prep",
