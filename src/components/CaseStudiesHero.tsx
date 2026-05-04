@@ -14,9 +14,9 @@ const CASE_STUDIES = [
     {
         slug: "pe-nda-review-automation",
         industry: "Private Equity",
-        headline: "Hours saved on every NDA",
+        headline: "Partner time back, every NDA",
         description:
-            "An NDA review agent built for a Canadian private equity firm — clause-by-clause first-pass mark-ups against the partner's preferred positions.",
+            "Contract analytics for a Canadian private equity firm — clause-by-clause first-pass NDA mark-ups in the partner's voice, deployed in two weeks.",
     },
     {
         slug: "vc-meeting-prep",

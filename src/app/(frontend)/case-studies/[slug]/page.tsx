@@ -9,14 +9,14 @@ const CASE_STUDIES = [
     {
         slug: "pe-nda-review-automation",
         industry: "Private Equity",
-        headline: "Hours saved on every NDA",
+        headline: "Partner time back, every NDA",
         description:
-            "An NDA review agent built for a Canadian private equity firm — clause-by-clause first-pass mark-ups against the partner's preferred positions.",
+            "Contract analytics for a Canadian private equity firm — clause-by-clause first-pass NDA mark-ups in the partner's voice, deployed in two weeks.",
         situation:
-            "A Canadian private equity firm was routing every incoming NDA through a single partner for mark-up before diligence could begin. The firm's scarcest resource was being spent on a largely pattern-based task — a bottleneck that slowed the entire deal cycle.",
-        built: "We built an NDA Review Agent in Claude Cowork, trained on the firm's NDA reference base and the partner's mark-up preferences. It compares incoming NDAs clause-by-clause against the firm's standard positions and produces a tracked-changes Word mark-up in house style — ready for partner review. A 30-day learning loop folds each round of edits back into the reference set so the agent improves across live deals.",
+            "A Canadian private equity firm was bottlenecked on partner availability for NDA review. Every incoming teaser stalled until the partner could redline the NDA personally — the firm's most strategic resource consumed by a scaled, pattern-based task at the front of the diligence cycle. The deal pipeline paid the price.",
+        built: "We deployed an NDA Review Agent inside the firm's secure Claude environment, trained on its NDA reference corpus and the partner's negotiated positions. The agent runs clause-by-clause contract analytics against the firm's standard positions and outputs a tracked-changes Word mark-up in house style — ready for partner review in minutes. Associates invoke the skill on incoming NDAs without touching code or prompts. A 30-day calibration loop folds the partner's edits back into the reference set after every live deal, converging the agent's output on the partner's voice over time.",
         outcome:
-            "The partner's per-NDA review collapsed from a full read-and-redline to a quick approval pass. Associates now run the agent on incoming NDAs and surface a partner-ready mark-up — keeping the partner in the driver's seat while removing the first-pass drudgery and tightening consistency across the firm's NDA book.",
+            "First-pass mark-ups now match the partner's preferred positions on the majority of material clauses, and the partner's per-NDA review compresses from a full read-and-redline to a quick approval pass — targeting 50% partner time saved on every NDA. The agent stands as the firm's entry point into a broader AI-enabled diligence stack: CIM triage, IC memo drafting, and portfolio reporting on the roadmap.",
     },
     {
         slug: "vc-meeting-prep",
