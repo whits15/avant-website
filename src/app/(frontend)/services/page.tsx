@@ -6,7 +6,7 @@ import { BOOKING_URL } from "@/lib/booking";
 export const metadata: Metadata = {
     title: "AI Implementation Services for Canadian PE, VC & Family Offices",
     description:
-        "AI readiness sessions, implementation sprints, and monthly retainers for Canadian PE, VC & family offices. From intro call to full AI strategy.",
+        "AI implementation services for Canadian private equity, venture capital, and family offices: rapid AI assessments, 2–4 week implementation sprints, and AI workflow design for deal-team operations.",
     alternates: { canonical: '/services' },
 };
 

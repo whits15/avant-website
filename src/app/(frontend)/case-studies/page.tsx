@@ -7,7 +7,7 @@ import styles from "./case-studies.module.css";
 export const metadata: Metadata = {
     title: "AI Implementation Case Studies — Canadian PE, VC & Family Offices",
     description:
-        "Real results from real AI engagements. See how Avant helps Canadian PE, VC & family offices save time, reduce errors, and streamline operations.",
+        "Real results from real AI engagements at Canadian private equity, venture capital, and family offices: NDA review automation, deal-team meeting prep, and AI-powered internal operations.",
     alternates: { canonical: '/case-studies' },
 };
 

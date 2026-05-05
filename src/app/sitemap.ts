@@ -5,58 +5,60 @@ import keystaticConfig from '../../keystatic.config';
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.avantai.ca';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+    const lastSiteUpdate = new Date('2026-05-05');
+
     const sitemapData: MetadataRoute.Sitemap = [
         {
             url: `${baseUrl}`,
-            lastModified: new Date('2026-03-23'),
+            lastModified: lastSiteUpdate,
             changeFrequency: 'weekly',
             priority: 1,
         },
         {
             url: `${baseUrl}/about`,
-            lastModified: new Date('2026-03-23'),
+            lastModified: lastSiteUpdate,
             changeFrequency: 'monthly',
             priority: 0.8,
         },
         {
             url: `${baseUrl}/services`,
-            lastModified: new Date('2026-03-23'),
+            lastModified: lastSiteUpdate,
             changeFrequency: 'monthly',
             priority: 0.8,
         },
         {
             url: `${baseUrl}/case-studies`,
-            lastModified: new Date('2026-03-23'),
+            lastModified: lastSiteUpdate,
             changeFrequency: 'monthly',
             priority: 0.8,
         },
         {
             url: `${baseUrl}/contact`,
-            lastModified: new Date('2026-03-23'),
+            lastModified: lastSiteUpdate,
             changeFrequency: 'monthly',
             priority: 0.8,
         },
         {
             url: `${baseUrl}/blog`,
-            lastModified: new Date('2026-03-23'),
+            lastModified: lastSiteUpdate,
             changeFrequency: 'weekly',
             priority: 0.8,
         },
         {
             url: `${baseUrl}/case-studies/pe-nda-review-automation`,
-            lastModified: new Date('2026-05-04'),
+            lastModified: lastSiteUpdate,
             changeFrequency: 'monthly',
             priority: 0.7,
         },
         {
             url: `${baseUrl}/case-studies/vc-meeting-prep`,
-            lastModified: new Date('2026-03-23'),
+            lastModified: lastSiteUpdate,
             changeFrequency: 'monthly',
             priority: 0.7,
         },
         {
             url: `${baseUrl}/case-studies/internal-crm-workflow-automation`,
-            lastModified: new Date('2026-03-23'),
+            lastModified: lastSiteUpdate,
             changeFrequency: 'monthly',
             priority: 0.7,
         },

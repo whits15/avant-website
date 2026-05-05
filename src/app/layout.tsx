@@ -10,7 +10,7 @@ export const metadata: Metadata = {
         template: "%s | Avant",
     },
     description:
-        "Avant is an AI implementation consultancy for Canadian private equity, venture capital, and family offices — simple workflows, Claude enablement, and real systems shipped fast.",
+        "Avant is an AI implementation consultant for Canadian private equity, venture capital, and family offices. We design Claude-powered workflows that compress diligence, IC prep, LP reporting, and portfolio monitoring — shipped in 2–4 weeks.",
     robots: { index: true, follow: true },
     alternates: { canonical: '/' },
     openGraph: {

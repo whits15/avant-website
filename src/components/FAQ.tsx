@@ -6,6 +6,10 @@ import styles from "./FAQ.module.css";
 
 const FAQS = [
     {
+        q: "What is an AI implementation consultant for Canadian private equity?",
+        a: "An AI implementation consultant designs and ships working AI workflows inside a fund's real process — deal sourcing, diligence, IC prep, LP reporting, portfolio monitoring — instead of selling a strategy deck or a SaaS subscription. Avant is built specifically for Canadian PE, VC, and family offices, with engagements that ship in 2–4 weeks.",
+    },
+    {
         q: "Why hire Avant if we can just use Claude or ChatGPT ourselves?",
         a: "You can — and you should. The gap isn't access to the model, it's knowing where to point it inside your process. We compress your learning curve from months to weeks and guarantee successful application of AI in your Firm.",
     },
@@ -14,8 +18,8 @@ const FAQS = [
         a: "We prioritize local and private AI deployments — your data stays on your infrastructure, not on third-party servers. When cloud AI is the right fit, we implement strict access controls, encryption/local redaction, and data isolation so nothing leaks.",
     },
     {
-        q: "How long until we see real work getting done?",
-        a: "Most engagements produce working output in 2–4 weeks. We scope tight, ship fast, and iterate against actual usage — not a six-month roadmap that stalls in committee.",
+        q: "How long does AI implementation take for a Canadian VC or PE firm?",
+        a: "Most engagements produce working output in 2–4 weeks. We scope tight, ship fast, and iterate against actual usage — not a six-month roadmap that stalls in committee. A Rapid AI Assessment runs 1–2 weeks and ends with three to five ranked use cases scoped for build.",
     },
     {
         q: "What kind of work do you actually do?",
