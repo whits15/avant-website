@@ -13,6 +13,9 @@ export const metadata: Metadata = {
         "Avant is an AI implementation consultant for Canadian private equity, venture capital, and family offices. We design Claude-powered workflows that compress diligence, IC prep, LP reporting, and portfolio monitoring — shipped in 2–4 weeks.",
     robots: { index: true, follow: true },
     alternates: { canonical: '/' },
+    verification: {
+        google: 'nTscFUwZvMvOuLbbz4s3ShmHVt_Gh-xNQpZlRENs3n8',
+    },
     openGraph: {
         siteName: 'Avant',
         type: 'website',
