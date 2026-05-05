@@ -33,7 +33,7 @@ const CASE_STUDIES = [
     {
         slug: "internal-crm-workflow-automation",
         industry: "Internal",
-        headline: "AI-powered operations",
+        headline: "Our own ops stack, AI-automated",
         description:
             "How we built our own AI-driven CRM and workflow automation stack.",
         situation:
